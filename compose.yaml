@@ -1,0 +1,23 @@
+services:
+  api:
+    image: "vardynamika-api"
+    ports:
+      - "8989:5000"
+    secrets:
+      - openai_api_secret
+    entrypoint: >
+      /bin/sh -c "
+      export OPENAI_API_KEY=`cat /run/secrets/openai_api_secret` &&
+      flask run --host 0.0.0.0"
+  db:
+    image: "postgres"
+    environment:
+      POSTGRES_USER: "U000X"
+      POSTGRES_PASSWORD: "u000x-pass"
+      POSTGRES_DB: "var_dynamika_test"
+    ports:
+      - "6543:5432"
+
+secrets:
+  openai_api_secret:
+    external: true

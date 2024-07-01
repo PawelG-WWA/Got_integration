@@ -1,0 +1,10 @@
+{
+    "PROPAGATE_EXCEPTIONS": "True",
+    "API_TITLE": "Stores REST API",
+    "API_VERSION": "v1",
+    "OPENAPI_VERSION": "3.0.3",
+    "OPENAPI_URL_PREFIX": "/",
+    "OPEN_API_SWAGGER_UI_PATH": "/swagger-ui",
+    "OPENAPI_SWAGGER_UI_URL": "https://cdn.jsdelivr.net/npm/swagger-ui-dist/",
+    "SQLALCHEMY_DATABASE_URI": "postgresql://U000X:u000x-pass@localhost:6543/var_dynamika_test"
+}
